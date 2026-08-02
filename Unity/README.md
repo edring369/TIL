@@ -8,16 +8,13 @@
 
 ## 프레임워크
 GameManager는 게임 전체의 흐름과 상태를 관리하는 중앙 관리자이다. 게임 안에 하나만 존재하도록 하기 위해 Singleton 패턴으로 만든다. 
-
-
 - SaveManager
 - SceneManager
 - TableManager
 - AudioManager
 ...
 
-
-  ## 유니티 라이프사이클
+## 유니티 라이프사이클
 
 - Awake()← 컴포넌트 초기화 (캐싱) 
 - OnEnable() ← 오브젝트 활성화될 때 
@@ -73,3 +70,7 @@ public class Player : MonoBehaviour
     }
 }
 ```
+
+## 관련 용어들
+
+> 캐싱 : 자주 쓰는 컴포넌트나 오브젝트를 변수에 미리 저장해두는 것
