@@ -3,6 +3,7 @@
 
 - [프레임워크](#프레임워크)
 - [라이프사이클](#유니티-라이프사이클)
+- [GetComponent](#getcomponent)
 
 ---
 
@@ -70,6 +71,27 @@ public class Player : MonoBehaviour
     }
 }
 ```
+
+## GetComponent
+유니티 게임 오브젝트에는 여러 컴포넌트(Transform, RigidBody, SpriteRenderer 등)들이 있다. GetComponent는 오브젝트에 붙어있는 특정 부품을 찾아온다.
+
+```c#
+void Start () 
+{
+    Rigidbody rb = GetComponent<Rigidbody>();
+}
+```
+또 다른 방법으로는 인스펙터 창에서 직접 드래그 앤 드롭으로 연결하는 것이다.
+
+```c#
+public class Player : MonoBehaviour
+{
+    public Rigidbody rb;
+}    
+```
+
+주로 자기 자신에게 붙은 컴포넌트나 런타임에 동적으로 생성되는 오브젝트를 다룰 때 GetComponent를 사용하고,
+플레이어 스크립트, 체력바UI, 카메라, OnCollisionEnter(부딪힌 상대방을 누군지 알 수 없다)의 경우 인스펙터 창에서 직접 할당한다.
 
 ## 관련 용어들
 
